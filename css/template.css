@@ -1,13 +1,14 @@
 /* General section */
 
 * {
-	font-family: Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-size: 13px;
 }
 
 h1,
 h2 {
 	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 section.chapter-2 p,
