@@ -1,0 +1,49 @@
+/* Main template styles */
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+section {
+	height: 100vh;
+}
+
+/* Fisrt section styles */
+
+
+.hero-background {
+	margin: 135px auto;
+	width: 1065px;
+	height: 630px;
+	background: url('https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
+	background-position: center;
+	background-size: 100% auto;
+
+	position: relative;
+}
+
+.hero-title {
+	position: absolute;
+	background-color: #fff;
+}
+
+.hero-title {
+	position: absolute;
+	background-color: #fff;
+	left: 25%;
+	width: 50%;
+	top: 25%;
+	text-align: center;
+	padding: 48px 0;
+}
+
+.hero-title h1 {
+	font-size: 5.4rem;
+	line-height: 1rem;
+}
+
+.hero-title h2 {
+	line-height: 21px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+}
