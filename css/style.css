@@ -4,19 +4,27 @@
 }
 
 section {
-	height: 100vh;
+	min-height: 100vh;
+	position: relative;
+}
+
+.container {
+	max-width: 1065px;
+	margin: 0 auto;
 }
 
 /* Fisrt section styles */
 
+.hero-section > div {
+	padding: 5% 0;
+}
 
 .hero-background {
-	margin: 135px auto;
-	width: 1065px;
-	height: 630px;
-	background: url('https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
+	background-image: url('https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
+	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% auto;
+	min-height: 630px;
 
 	position: relative;
 }
@@ -48,4 +56,15 @@ section {
 	font-style: normal;
 	font-weight: bold;
 	font-size: 18px;
+}
+
+.hero-section .caption {
+	position: absolute;
+	bottom: 3%;
+	left: 55%;
+	padding: 0;
+	font-family: "ButlerLight", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #8C8888;
 }
