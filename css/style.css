@@ -4,19 +4,63 @@
 }
 
 section {
-	min-height: 100vh;
+	height: 100vh;
+	min-height: 600px;
 	position: relative;
+	max-width: 1065px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 100vh;
+	background-image: url('../img/inside.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+
+	/* Вариант позиционирования на flex */
+	/*display: flex;
+	align-items: center;
+	justify-content: center;*/
+	
+	/* Если не вариант с background и локальной картинкой */
+	/* background: none; */
+}
+
+section img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+
+	/* На данный момент не поддерживает IE!!! */
+	object-fit: contain;
+}
+
+.img-local {
+	/* Вариант с img и локальной картинкой */
+	display: none; 
+}
+.img-web {
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+
+	/* Вариант с img и картинкой с unsplash.com */
+	display: none;
 }
 
 .container {
-	max-width: 1065px;
-	margin: 0 auto;
-}
+	width: 100%;
+	/* Хитрый приём чтобы блок сохранял пропорции. Указываем паддинг в нужной пропорции */
+	padding-top: 59.199%;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	position: relative;
 
-/* Fisrt section styles */
-
-.hero-section > div {
-	padding: 5% 0;
+	/* Вариант с background и unsplash.com */
+	display: none;
 }
 
 .hero-background {
@@ -24,38 +68,44 @@ section {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% auto;
-	min-height: 630px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
 
+.hero-title {
 	position: relative;
-}
-
-.hero-title {
-	position: absolute;
-	background-color: #fff;
-}
-
-.hero-title {
-	position: absolute;
-	background-color: #fff;
-	left: 25%;
-	width: 50%;
-	top: 25%;
+	background-color: white;
 	text-align: center;
-	padding: 48px 0;
+	font-size: 5.5rem;
+	padding: 1.5em .5em 1.4em;
+	z-index: 1;
+	display: inline-block;
+	vertical-align: middle;
+
+	/* Для варианта с background и unsplash.com */
+	/* margin-top: -200vh; */
 }
 
 .hero-title h1 {
-	font-family: "ButlerLight", sans-serif;
-	font-weight: 400;
-	font-size: 5.4rem;
-	line-height: 1rem;
+	font-family: "Butler", sans-serif;
+	font-weight: 300;
+	font-size: 5.5rem;
+	line-height: 1.1em;
+	margin: 0;
 }
 
 .hero-title h2 {
 	line-height: 21px;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 1.125rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0;
 }
 
 .hero-section .caption {
@@ -63,8 +113,9 @@ section {
 	bottom: 3%;
 	left: 55%;
 	padding: 0;
-	font-family: "ButlerLight", sans-serif;
-	font-weight: 400;
+	font-family: "Butler", sans-serif;
+	font-weight: 300;
 	font-size: 18px;
 	color: #8C8888;
+	display: none;
 }
