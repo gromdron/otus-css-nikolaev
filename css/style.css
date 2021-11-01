@@ -15,23 +15,25 @@ section {
 
 /* Fisrt section styles */
 
-.hero-section > div {
-	padding: 5% 0;
+section.hero-section {
+	min-height: 900px;
 }
 
 .hero-background {
-	background-image: url('https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
+    /* position */
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    /* size */
+    width: 1065px;
+    height: 630px;
+
+    background-image: url('../img/hero-bg.jpg');
 	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100% auto;
-	min-height: 630px;
-
-	position: relative;
-}
-
-.hero-title {
-	position: absolute;
-	background-color: #fff;
 }
 
 .hero-title {
