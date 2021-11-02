@@ -4,60 +4,52 @@
 }
 
 section {
-	min-height: 100vh;
+	height: 100vh;
+	min-height: 600px;
 	position: relative;
-}
-
-.container {
-	max-width: 1065px;
-	margin: 0 auto;
 }
 
 /* Fisrt section styles */
 
 section.hero-section {
-	min-height: 900px;
-}
+	max-width: 1065px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 100vh;
 
-.hero-background {
-    /* position */
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    /* size */
-    width: 1065px;
-    height: 630px;
-
-    background-image: url('../img/hero-bg.jpg');
+	background-image: url('../img/hero-bg.jpg');
 	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
 }
 
 .hero-title {
-	position: absolute;
-	background-color: #fff;
-	left: 25%;
-	width: 50%;
-	top: 25%;
-	text-align: center;
-	padding: 48px 0;
+	position: relative;
+	background-color: white;
+	font-size: 5.5rem;
+	padding: 1.5em .5em 1.4em;
+	z-index: 1;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .hero-title h1 {
 	font-family: "Butler", sans-serif;
-	font-weight: normal;
-	font-size: 5.4rem;
-	line-height: 1rem;
+	font-weight: 300;
+	font-size: 5.5rem;
+	line-height: 1.1em;
+	margin: 0;
 }
 
 .hero-title h2 {
 	line-height: 21px;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 1.125rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0;
 }
 
 .hero-section .caption {
@@ -65,8 +57,6 @@ section.hero-section {
 	bottom: 3%;
 	left: 55%;
 	padding: 0;
-	font-family: "Butler", sans-serif;
-	font-weight: 300;
-	font-size: 18px;
+	font: 300 1.125rem/1.2 "Butler", sans-serif;
 	color: #8C8888;
 }
