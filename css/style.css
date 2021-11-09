@@ -9,7 +9,7 @@ section {
 	position: relative;
 }
 
-/* Fisrt section styles */
+/* Hero section styles */
 
 section.hero-section {
 	max-width: 1065px;
@@ -52,11 +52,86 @@ section.hero-section {
 	margin: 0;
 }
 
-.hero-section .caption {
+
+/* About section styles */
+
+section.about {
+	padding: 0 8rem;
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+.about > div {
+	display: inline-block;
+	width: 49.5%;
+	float: left;
+	height: 100%;
+}
+
+.about h2 {
 	position: absolute;
-	bottom: 3%;
-	left: 55%;
-	padding: 0;
-	font: 300 1.125rem/1.2 "Butler", sans-serif;
-	color: #8C8888;
+	transform: rotate(-90deg);
+	bottom: 10vh;
+	margin: 0;
+	right: 0;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+/* Image side */
+.about .about-img {
+	overflow: hidden;
+}
+
+div.about-img > img {
+	object-fit: cover;
+	height: 90%;
+	object-position: center;
+	width: 100%;
+}
+
+div.about-text .about-vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-right: 8rem;
+}
+
+/* Text side */
+.about .about-text {
+	width: calc(49.5% - 8rem);
+	padding-left: 8rem;
+}
+
+.about-text h3 {
+	font-family: "Butler", sans-serif;
+	font-size: 5.4rem;
+	font-weight: 300;
+}
+
+.about-text > div h4, span {
+	font-size: 1.15rem;
+	font-weight: 500;
+	margin: 0;
+	color: #636363;
+}
+
+.about-text blockquote {
+	margin: 0;
+}
+
+.about-text blockquote p:before {
+	content: "\201C";
+	display: inline;
+}
+
+.about-text blockquote p:after {
+	content: "\201D";
+	display: inline;
+}
+
+.about-text blockquote p {
+	font-family: "Butler", sans-serif;
+	font-weight: 300;
+	font-size: 2rem;
 }
