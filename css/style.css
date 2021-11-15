@@ -1,6 +1,11 @@
 /* Main template styles */
-* {
+body {
 	font-family: 'Roboto', sans-serif;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 section {
@@ -9,9 +14,20 @@ section {
 	position: relative;
 }
 
-/* Hero section styles */
+/* Debug section start */
+#hero-section {
+	display: none;
+}
+#about-section {
+	display: none;
+}
+#designer-section {
+	display: block;
+}
+/* Debug section end */
 
-section.hero-section {
+/* Hero section styles */
+#hero-section {
 	max-width: 1065px;
 	text-align: center;
 	margin: 0 auto;
@@ -54,21 +70,18 @@ section.hero-section {
 
 
 /* About section styles */
-
-section.about {
+#about-section .container {
 	padding: 0 8rem;
-	margin: 0 auto;
-	max-width: 1440px;
+	height: 100%;
 }
 
-.about > div {
-	display: inline-block;
-	width: 49.5%;
+#about-section .container > div {
+	width: 50%;
 	float: left;
 	height: 100%;
 }
 
-.about h2 {
+#about-section h2 {
 	position: absolute;
 	transform: rotate(-90deg);
 	bottom: 10vh;
@@ -79,18 +92,18 @@ section.about {
 }
 
 /* Image side */
-.about .about-img {
+#about-section .about-img {
 	overflow: hidden;
 }
 
-div.about-img > img {
+.about-img > img {
 	object-fit: cover;
 	height: 90%;
 	object-position: center;
 	width: 100%;
 }
 
-div.about-text .about-vertical-center {
+.about-text .about-vertical-center {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -98,8 +111,7 @@ div.about-text .about-vertical-center {
 }
 
 /* Text side */
-.about .about-text {
-	width: calc(49.5% - 8rem);
+.about-text .about-vertical-center {
 	padding-left: 8rem;
 }
 
@@ -135,3 +147,37 @@ div.about-text .about-vertical-center {
 	font-weight: 300;
 	font-size: 2rem;
 }
+
+
+/* Designer section */
+#designer-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 900px;
+}
+
+#designer-section h2 {
+	display: block;
+	position: absolute;
+	top: 22%;
+	right: 29%;
+	transform: rotate(-90deg);
+	width: 0;
+	font-size: 18px;
+}
+
+.designers {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: baseline;
+	width: 100%;
+}
+.designer-element {
+	width: 25%;
+}
+
+.designer-element.main-designer {
+	width: 50%;
+}
+
