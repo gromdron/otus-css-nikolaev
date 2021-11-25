@@ -43,7 +43,7 @@ section:after {
 }
 */
 
-/* Debug section start * /
+/* Debug section start */
 #hero-section {
 	display: none !important;
 }
@@ -54,7 +54,7 @@ section:after {
 	display: none !important;
 }
 #testimonials-section {
-	display: block;
+	display: none !important;
 }
 /* Debug section end */
 
@@ -288,4 +288,46 @@ section:after {
 	font-weight: 300;
 	font-size: 2rem;
 	line-height: 2.4rem;
+}
+
+/* Strong section */
+#strong-section {
+	display: flex;
+	align-content: center;
+}
+
+#strong-section h2 {
+	position: absolute;
+	transform: rotate(-90deg);
+	top: 15vh;
+	margin: 0;
+	left: 20vw;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.strong-row {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.strong-row-item {
+	height: 550px;
+	max-width: 350px;
+	margin:  0 30px;
+}
+
+.strong-row-item:first-child {
+	margin-left: 0px;
+}
+
+.strong-row-item:last-child {
+	margin-right: 0px;
+} 
+
+.strong-row-item h3 {
+	font-family: "Butler", sans-serif;
+	font-weight: 400;
+	font-size: 5.75rem;
+	line-height: 6.9rem;
 }
