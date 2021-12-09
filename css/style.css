@@ -165,6 +165,26 @@ section:after {
 	color: #636363;
 }
 
+.about-text .about-profession span:after {
+	content: "\0020\002F\0020";
+	display: inline;
+	color: #636363;
+	font-size: 1.15rem;
+	font-weight: 500;
+}
+
+.about-text .about-profession span:last-child:after {
+	content: "\0020";
+}
+
+.about-text figure {
+	margin:  0;
+}
+
+.about-text figure figcaption {
+	display: none;
+}
+
 .about-text blockquote {
 	margin: 0;
 }
@@ -201,7 +221,7 @@ section:after {
 	right: 29%;
 	transform: rotate(-90deg);
 	width: 0;
-	font-size: 18px;
+	font-size: 1.2rem;
 }
 
 .designers {
