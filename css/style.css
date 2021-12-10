@@ -379,3 +379,8 @@ section:after {
 	position: absolute;
 	margin-top: -10rem;
 }
+
+
+footer .mobile-menu {
+	display: none;
+}
