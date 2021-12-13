@@ -20,30 +20,6 @@ p {
 	margin-block: 0;
 }
 
-/*
-section:before {
-	content: "\2014 \00A0 Creative studio";
-	position: absolute;
-	top: 80px;
-	right: 33%;
-	color: #8C8888;
-	font-size: 18px;
-	font-family: "Butler", sans-serif;
-	font-weight: normal;
-}
-
-section:after {
-	content: "\2014 \00A0 Creative studio";
-	position: absolute;
-	top: -80px;
-	right: 33%;
-	color: #8C8888;
-	font-size: 18px;
-	font-family: "Butler", sans-serif;
-	font-weight: normal;
-}
-*/
-
 /* Debug section start * /
 #hero-section {
 	display: none !important;
@@ -165,6 +141,26 @@ section:after {
 	color: #636363;
 }
 
+.about-text .about-profession span:after {
+	content: "\0020\002F\0020";
+	display: inline;
+	color: #636363;
+	font-size: 1.15rem;
+	font-weight: 500;
+}
+
+.about-text .about-profession span:last-child:after {
+	content: "\0020";
+}
+
+.about-text figure {
+	margin:  0;
+}
+
+.about-text figure figcaption {
+	display: none;
+}
+
 .about-text blockquote {
 	margin: 0;
 }
@@ -201,7 +197,7 @@ section:after {
 	right: 29%;
 	transform: rotate(-90deg);
 	width: 0;
-	font-size: 18px;
+	font-size: 1.2rem;
 }
 
 .designers {
