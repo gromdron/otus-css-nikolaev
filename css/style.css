@@ -20,17 +20,20 @@ p {
 	margin-block: 0;
 }
 
-/* Debug section start * /
+/* Debug section start */
 #hero-section {
 	display: none !important;
 }
 #about-section {
 	display: none !important;
 }
-#designer-section {
+/*#designer-section {
+	display: none !important;
+}*/
+#testimonials-section {
 	display: none !important;
 }
-#testimonials-section {
+#strong-section {
 	display: none !important;
 }
 /* Debug section end */
@@ -181,13 +184,28 @@ p {
 	font-size: 2rem;
 }
 
-
 /* Designer section */
+
 #designer-section {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 900px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.designers {
+	display: inline-block;
+	margin:  0 auto;
+	width: 100%;
+}
+
+.designer-element {
+	display: inline-block;
+	width: 22.5%;
+	margin-right: 2.5%;
+}
+
+.designer-element:first-child {
+	width: 45%;
+	margin-right: 5%;
 }
 
 #designer-section h2 {
@@ -200,34 +218,54 @@ p {
 	font-size: 1.2rem;
 }
 
-.designers {
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: baseline;
-	width: 100%;
-}
-.designer-element {
-	width: 25%;
+.designer-element > img {
+	max-width: 100%;
 }
 
-.designer-element:first-child {
-	width: 50%;
+@supports /* false && */ (display:flex)
+{
+	#designer-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 900px;
+	}
+
+	.designers {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: baseline;
+		width: 100%;
+		margin: unset;
+	}
+
+	.designer-element {
+		width: 25%;
+		margin-right: 0;
+	}
+
+	.designer-element:first-child {
+		width: 50%;
+		margin-right: 0;
+	}
+
+	.designer-element:first-child > div {
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		max-width: 85%;
+	} 
+
+	.designer-element:first-child > img {
+		max-width: 85%;
+	}
+
+	.designer-element strong {
+		text-transform: uppercase;
+	}
 }
 
-.designer-element:first-child > div {
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	max-width: 85%;
-} 
 
-.designer-element:first-child > img {
-	max-width: 85%;
-}
-
-.designer-element strong {
-	text-transform: uppercase;
-}
 
 
 /* Testimonials section */
