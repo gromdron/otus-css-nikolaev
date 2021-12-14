@@ -20,16 +20,16 @@ p {
 	margin-block: 0;
 }
 
-/* Debug section start */
+/* Debug section start * /
 #hero-section {
 	display: none !important;
 }
 #about-section {
 	display: none !important;
 }
-/*#designer-section {
+#designer-section {
 	display: none !important;
-}*/
+}
 #testimonials-section {
 	display: none !important;
 }
@@ -269,53 +269,48 @@ p {
 
 
 /* Testimonials section */
-
-#testimonials-section {
-	display: grid;
-	grid-template-columns: auto 515px 50%;
-	grid-row-gap: 30px;
-}
-
-.testimonial-headline {
-	grid-column: 2 / 4;
-	align-self: center;
+.testimonial-headline h2 {
+	padding: 1rem 10rem;
 }
 
 .testimonial-headline h2 {
-	margin: 0px;
-	margin-block: 0px;
+	margin: 0;
+	margin-block: 0;
 	line-height: 1;
-	font-size: 18px;
+	font-size: 1.2rem;
 }
 
-.testimonial-image {
-	grid-row: 2 /3;
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: flex-start;
-	justify-content: center;
+
+.creativities,
+.testimonial-image,
+.testimonial-motivation {
+	float: left;
 }
 
 .creativities {
-	display: flex;
-	flex-flow: column-reverse;
-	justify-content: space-evenly;
-	grid-row: 1 / 3;
-	transform: translate(10%);
+	height: 85%;
+	display: table;
+	table-layout: fixed;
+	width: 10%;
+}
+.creativity {
+	display: table-row;
+}
+.creativity p {
+	transform: rotate(-90deg) translateX(-50%) translateY(2rem);
 }
 
-.creativities .creativity {
-	transform: rotate(-90deg);
+.testimonial-image {
+	width: 40%;
 }
 
 .testimonial-motivation {
-	grid-row: 2 / 3;
+	width: 50%;
 }
 
 .testimonial-motivation .container {
-	max-width: 30%;
+	width: 15rem;
 	margin: 0 auto;
-	text-align: center;
 }
 
 .testimonial-motivation p {
@@ -324,6 +319,51 @@ p {
 	font-size: 2rem;
 	line-height: 2.4rem;
 }
+
+@supports /*false &&*/ (display:grid)
+{
+	#testimonials-section {
+		display: grid;
+		grid-template-columns: auto 40% 50%;
+	}
+
+	.testimonial-headline {
+		grid-column: 2 / 4;
+		align-self: center;
+		margin: 0;
+	}
+
+	.testimonial-image {
+		grid-row: 2 /3;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-start;
+		justify-content: center;
+		width: auto;
+	}
+
+	.creativities {
+		width: auto;
+		display: flex;
+		flex-flow: column-reverse;
+		justify-content: space-around;
+		grid-row: 1 / 3;
+		grid-column: 1 / 2;
+		transform: translate(10%);
+	}
+
+
+	.testimonial-motivation {
+		grid-row: 2 / 3;
+		width: auto;
+	}
+
+	.testimonial-motivation .container {
+		max-width: 30%;
+		text-align: center;
+	}
+}
+
 
 /* Strong section */
 #strong-section {
