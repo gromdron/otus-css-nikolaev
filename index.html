@@ -2,52 +2,134 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Текст книги Властелин Колец - Книга Пятая</title>
+	<title>OTUS: Html+Css demo page</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
 	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="./css/template.css">
+	<link rel="stylesheet" type="text/css" href="./css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-	<aside class='intro'>
-		<h2>Автор, Дж.Р.Р.</h2>
-
-		<p>Толкин, профессор Оксфордского университета, специалист по древнему и средневековому английскому языку, создал удивительный мир - Средиземье, который вот уже без малого пятьдесят лет неодолимо влечет к себе миллионы читателей.</p>
-	</aside>
-
-	<header>
-		<h1>Книга Пятая</h1>
-
-		<ul>
-			<li>Глава 1 Минас Тирит</li>
-			<li>Глава 2 Выбор Арагорна</li>
-			<li>Глава 3 Рохан собирает войска</li>
-		</ul>
-	</header>
-
 	<main>
-		<section class='chapter-1'>
-			<a name="chapter-1"></a>
-			<h2>Глава 1 Минас Тирит</h2>
-			<p><span class='oblique'>Пиппин выглянул</span> из-под плаща Гэндальфа. Он никак не мог понять, во сне или наяву свистит в ушах черный ночной ветер, медленно плывет зубчатая тень гор далеко справа, во сне или наяву качается у него над головой звездное небо. Он пытался вспомнить, что с ним и где он, но мысли путались, отдельные картины сменяли друг друга.</p>
-			<p><span class='bold'>Яркий желтый огонь</span> в темном небе заставил Пиппина съежиться от страха. Зачем Гэндальф везет его в это страшное, там, впереди? Он протер глаза. На востоке всходила луна. Значит, они будут скакать и скакать, мчаться сквозь ночь бесконечно долго.</p>
+		<section id='hero-section' class='hero-section'>
+			<div class="hero-title">
+				<h1>Atlas Studio</h1>
+				<h2>Modern Web Studio</h2>
+			</div>
 		</section>
 
-		<section class='chapter-2'>
-			<a name="chapter-2"></a>
-			<h2>Глава 2 Выбор Арагорна</h2>
-			<p>Когда стих топот копыт Сполоха, уносящего Гэндальфа и Пиппина, Мерри вернулся к Арагорну.</p>
-			<p>До сих пор от меня было немного толку, но я все-таки не какая-нибудь безделушка. <span class='bold'>Всадникам не до меня</span>, хотя их Правитель и обещал, что мы поговорим с ним о Шире после возвращения.</p>
+		<section id='about-section'>
+			<h2>Biography</h2>
+			<div class='container'>
+				<div class='about-img'>
+					<img src='./img/katya.jpg' alt='Katya Mills'>
+				</div><div class='about-text'>
+					<div class='about-vertical-center'>
+						<h3>Katya<br />Mills</h3>
+						<div class='about-profession'>
+							<h4>Art Director</h4>
+							<span>Scenography</span> <span>Styling</span> <span>Creative Photography</span> <span>Design</span>
+						</div>
+
+						<figure>
+							<blockquote cite="#">
+								<p>The more I deal with the work as something that is my own,  as something that is personal, the more successful it is.</p>
+							</blockquote>
+							<figcaption>-Katy Mills</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
 		</section>
 
-		<section class='chapter-3'>
-			<a name="chapter-3"></a>
-			<h2>Глава 3 Рохан собирает войска</h2>
-			<p>Мерри с изумлением озирался по сторонам. <span class='oblique'>Ему было интересно в незнакомой стране.</span> Это был край без неба; в туманной дымке глаз различал только горы, каменная стена вставала за стеной, меж ними разверзались пропасти, заполненные туманом. От могучих водопадов воздух тихо звенел, шумели деревья, стучали по камням копыта. <span class='underscore'>Раньше Мерри любил слушать о горах, думать о них, но теперь, когда горные хребты вздымались вокруг под самые небеса, он чувствовал себя неуютно, живо ощущая исполинскую тяжесть, гнетущую грудь Средиземья.</span> Слишком они были большие; глядя на них, хотелось оказаться в маленькой комнатке возле камина.</p>
+		<section id='designer-section'>
+			<h2>Designers</h2>
+			<div class='designers'><div class='designer-element'>
+					<img src='./img/designer-wonder.jpg' alt='Jess wonder'>
+					<div>
+						<p><strong>Jess Wonder</strong><br />
+						<b>From/</b> Be more flower<br />
+						<b>Skills/</b> Design Strategy / Marketing</p>
+					</div>
+				</div><div class='designer-element'>
+					<img src='./img/designer-clein.jpg' alt='Kameron Clein'>
+					<div>
+						<p><strong>Kameron Clein</strong><br />
+						<b>From/</b> Be more flower<br />
+						<b>Skills/</b> Design Strategy / Marketing</p>
+					</div>
+				</div><div class='designer-element'>
+					<img src='./img/designer-red.jpg' alt='Louisse Red'>
+					<div>
+						<p><strong>Louisse Red</strong><br />
+						<b>From/</b> Be more flower<br />
+						<b>Skills/</b> Design Strategy / Marketing</p>
+					</div>
+				</div>
+			</div>
 		</section>
 
+		<section id='testimonials-section'>
+			<div class='testimonial-headline'>
+				<h2>Testimonials</h2>
+			</div>
+			<div class='creativities'>
+				<div class='creativity'>
+					<p><b>Creativity</b><br/>www.whitepapers.com</p>
+				</div>
+				<div class='creativity'>
+					<p><b>Creativity</b><br/>www.whitepapers.com</p>
+				</div>
+				<div  class='creativity'>
+					<p><b>Website</b><br/>www.whitepapers.com</p>
+				</div>
+			</div><div class='testimonial-image'>
+				<img src='./img/testimonial-house.jpg' alt="House">
+			</div><div class='testimonial-motivation'>
+				<div class='container'>
+					<p>I just really want to do good work and work with some great people, people who challange me.</p>
+					<img src="./img/testimonial-pocket.jpg" alt="Pocket">
+				</div>
+			</div>
+		</section>
+
+		<section id='strong-section'>
+			<h2>Strong points</h2>
+
+			<h3>Strengths</h3>
+
+			<div class='strong-row'>
+				<div class='strong-row-item item-image'>
+					<img src='./img/strong-1.jpg' alt="" />
+				</div>
+				<div class='strong-row-item item-image'>
+					<img src='./img/strong-2.jpg' alt="" />
+				</div>
+				<div class='strong-row-item item-text active'>
+					
+					<div class='text-only'>
+						<div>Interiors</div>
+						<div>Outdoors</div>
+						<div>Portraits</div>
+						<div>Styling</div>
+						<div>Events</div>
+						<div>Architecture</div>
+						<div>Design</div>
+						<div>Celebrations</div>
+						<div>Artistic</div>
+						<div>Fashion</div>
+						<div>Nature</div>
+						<div>Creativity</div>
+					</div>
+				</div>
+				<div class='strong-row-item item-image'>
+					<img src='./img/strong-2.jpg' alt="" />
+				</div>
+			</div>
+		</section>
 	</main>
-	
-	<footer>
-		<a href='#chapter-1'>Вернуться к главе 1</a>
-	</footer>
 </body>
 </html>
