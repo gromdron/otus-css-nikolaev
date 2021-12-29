@@ -1,22 +1,11 @@
-
 @media screen and (max-width: 767px) {
 
-	/* Main template styles */
-	main {
-		height: 90vh;
-	}
-
-	nav.mobile-menu {
-		height: calc(10vh - 1px);
-	}
-
 	section {
-		height: 90vh;
+		min-height: 100vh;
 	}
 
 	/* Hero section */
 	#hero-section {
-		line-height: 90vh;
 		background: no-repeat center/cover url('../img/hero-bg.jpg');
 	}
 
@@ -118,18 +107,35 @@
 	}
 
 	.designers {
-		transform: translateX(6rem);
-		width: auto;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		padding-bottom: 1rem;
+		padding-left: 2rem;
 	}
 
 	.designer-element {
-		overflow-x: hidden;
 		width: 17rem;
 		margin-right: 1rem;
+		min-width: 17rem;
+	}
+	.designer-element > img {
+		height: 24rem;
 	}
 
 	.designer-element:first-child {
-		display: none;
+		order: 1;
+	}
+
+	.designer-element:first-child > div {
+		display: block;
+		max-width: 100%;
+	}
+
+	.designer-element:first-child > img {
+		max-width: 100%;
+		object-fit: none;
+		height: 24rem;
+		object-position: 10% 100%;
 	}
 
 	/* Testimonials section */
@@ -142,8 +148,12 @@
 	.testimonial-headline {
 		grid-column: 1 / 3;
 		grid-row: 1 / 2;
-		padding: 2rem;
+		padding: 1rem 2rem;
 		text-align: right;
+	}
+
+	.testimonial-headline h2 {
+		padding: 0;
 	}
 
 	.creativities {
@@ -156,7 +166,7 @@
 		justify-content: space-between;
 	}
 
-	.creativities .creativity {
+	.creativities .creativity p {
 		transform: rotate(0deg);
 	}
 
@@ -189,7 +199,7 @@
 	}
 
 
-	/* Strong section */
+	/* Strong section * /
 	#strong-section h2 {
 		transform: unset;
 		top: 2rem;
@@ -218,7 +228,7 @@
 		margin-top: -7rem;
 	}
 
-	/* Footer styles */
+	/* Footer styles * /
 
 	.mobile-menu {
 		display: flex;
@@ -236,5 +246,52 @@
 		text-decoration: none;
 		color: #000;
 	}
+	/* */
 
+
+
+		/* Menu */
+	.menu {
+		position: fixed;
+		top: unset;
+		left: unset;
+		right: unset;
+		bottom: 0;
+		width: 100%;
+		height: calc(4rem + 1px);
+	}
+
+	.mobile-menu {
+		display: flex;
+		
+		border-top: 1px solid black;
+		width: 100%;
+	}
+
+	.menu__btn {
+		display: none;
+	}
+
+	.menu__items {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		height: 100%;
+		border-top: 1px solid black;
+	}
+
+	.menu__items a {
+		display: block;
+		font-family: "Butler", sans-serif;
+		font-weight: normal;
+		font-size: 2.5rem;
+		margin: unset;
+		text-decoration: none;
+		color: #000;
+		margin-top: 0.5rem;
+	}
+
+	.menu__items a span {
+		display: none;
+	}
 }

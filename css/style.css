@@ -12,52 +12,14 @@ main {
 
 section {
 	height: 100vh;
-	min-height: 600px;
+	min-height: 50rem;
 	position: relative;
+	width: 100%;
 }
 
 p {
 	margin-block: 0;
 }
-
-/*
-section:before {
-	content: "\2014 \00A0 Creative studio";
-	position: absolute;
-	top: 80px;
-	right: 33%;
-	color: #8C8888;
-	font-size: 18px;
-	font-family: "Butler", sans-serif;
-	font-weight: normal;
-}
-
-section:after {
-	content: "\2014 \00A0 Creative studio";
-	position: absolute;
-	top: -80px;
-	right: 33%;
-	color: #8C8888;
-	font-size: 18px;
-	font-family: "Butler", sans-serif;
-	font-weight: normal;
-}
-*/
-
-/* Debug section start * /
-#hero-section {
-	display: none !important;
-}
-#about-section {
-	display: none !important;
-}
-#designer-section {
-	display: none !important;
-}
-#testimonials-section {
-	display: none !important;
-}
-/* Debug section end */
 
 /* Hero section styles */
 #hero-section {
@@ -70,6 +32,8 @@ section:after {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% auto;
+
+	min-height: 100vh;
 }
 
 #hero-section:before {
@@ -117,6 +81,11 @@ section:after {
 	float: left;
 	height: 100%;
 }
+#about-section .container:after {
+	content: "";
+	display: block;
+	clear: both;
+}
 
 #about-section h2 {
 	position: absolute;
@@ -158,7 +127,8 @@ section:after {
 	font-weight: 300;
 }
 
-.about-text > div h4, span {
+.about-text > div h4,
+.about-text > div span {
 	font-size: 1.15rem;
 	font-weight: 500;
 	margin: 0;
@@ -205,103 +175,136 @@ section:after {
 	font-size: 2rem;
 }
 
-
 /* Designer section */
+
 #designer-section {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 900px;
+	display: table;
+	vertical-align: middle;
+}
+
+.designers {
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.designer-element {
+	display: inline-block;
+	width: 22.5%;
+	margin-right: 2.5%;
+}
+
+.designer-element:first-child {
+	width: 45%;
+	margin-right: 5%;
 }
 
 #designer-section h2 {
 	display: block;
 	position: absolute;
-	top: 22%;
+	top: 20%;
 	right: 29%;
 	transform: rotate(-90deg);
 	width: 0;
 	font-size: 1.2rem;
 }
 
-.designers {
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: baseline;
-	width: 100%;
-}
-.designer-element {
-	width: 25%;
+.designer-element > img {
+	max-height: 36rem;
+	max-width: 100%;
 }
 
-.designer-element:first-child {
-	width: 50%;
-}
+@supports /*false &&*/ (display:flex)
+{
+	#designer-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-.designer-element:first-child > div {
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	max-width: 85%;
-} 
+	.designers {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: baseline;
+		width: 100%;
+		margin: unset;
+	}
 
-.designer-element:first-child > img {
-	max-width: 85%;
-}
+	.designer-element:first-child > div {
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		max-width: 85%;
+	} 
 
-.designer-element strong {
-	text-transform: uppercase;
+	.designer-element:first-child > img {
+		max-width: 100%;
+		object-fit: scale-down;
+	}
+
+	.designer-element strong {
+		text-transform: uppercase;
+	}
 }
 
 
 /* Testimonials section */
-
-#testimonials-section {
-	display: grid;
-	grid-template-columns: auto 515px 50%;
-	grid-row-gap: 30px;
-}
-
-.testimonial-headline {
-	grid-column: 2 / 4;
-	align-self: center;
+.testimonial-headline h2 {
+	padding: 1rem 10rem;
 }
 
 .testimonial-headline h2 {
-	margin: 0px;
-	margin-block: 0px;
+	margin: 0;
+	margin-block: 0;
 	line-height: 1;
-	font-size: 18px;
+	font-size: 1.2rem;
 }
 
-.testimonial-image {
-	grid-row: 2 /3;
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: flex-start;
-	justify-content: center;
+
+.creativities,
+.testimonial-image,
+.testimonial-motivation {
+	float: left;
+}
+
+.creativities:after,
+.testimonial-image:after,
+.testimonial-motivation:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 .creativities {
-	display: flex;
-	flex-flow: column-reverse;
-	justify-content: space-evenly;
-	grid-row: 1 / 3;
-	transform: translate(10%);
+	height: 85%;
+	display: table;
+	table-layout: fixed;
+	width: 10%;
+}
+.creativity {
+	display: table-row;
+}
+.creativity p {
+	transform: rotate(-90deg) translateX(-50%) translateY(2rem);
 }
 
-.creativities .creativity {
-	transform: rotate(-90deg);
+.testimonial-image {
+	width: 40%;
+}
+
+.testimonial-image > img {
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .testimonial-motivation {
-	grid-row: 2 / 3;
+	width: 50%;
 }
 
 .testimonial-motivation .container {
-	max-width: 30%;
+	width: 15rem;
 	margin: 0 auto;
-	text-align: center;
 }
 
 .testimonial-motivation p {
@@ -309,24 +312,86 @@ section:after {
 	font-weight: 300;
 	font-size: 2rem;
 	line-height: 2.4rem;
+	width: 14rem;
 }
+
+.testimonial-motivation .container img {
+	width: 14rem;
+}
+
+@supports /*false &&*/ (display:grid)
+{
+	#testimonials-section {
+		display: grid;
+		grid-template-columns: auto 40% 50%;
+		grid-template-rows: 3rem auto;
+	}
+
+	.testimonial-headline {
+		grid-column: 2 / 4;
+		align-self: center;
+		margin: 0;
+	}
+
+	.testimonial-image {
+		grid-row: 2 /3;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-start;
+		justify-content: center;
+		width: auto;
+	}
+
+	.creativities {
+		width: auto;
+		display: flex;
+		flex-flow: column-reverse;
+		justify-content: space-around;
+		grid-row: 1 / 3;
+		grid-column: 1 / 2;
+		transform: translate(10%);
+	}
+
+
+	.testimonial-motivation {
+		grid-row: 2 / 3;
+		width: auto;
+	}
+
+	.testimonial-motivation .container {
+		max-width: 15rem;
+		text-align: center;
+	}
+}
+
 
 /* Strong section */
 #strong-section {
 	display: flex;
 	align-items: center;
-	min-height: 750px;
 	box-sizing: border-box;
 }
 
 #strong-section h2 {
 	position: absolute;
 	transform: rotate(-90deg);
-	top: 10vh;
+	top: 5rem;
 	margin: 0;
-	left: 30vw;
+	left: 17rem;
 	font-size: 1.2rem;
 	font-weight: 700;
+}
+
+#strong-section h3 {
+	font-family: "Butler", sans-serif;
+	font-weight: normal;
+	font-size: 5.75rem;
+	line-height: 5.75rem;
+	margin-block-start: 0;
+
+	position: absolute;
+	top: 4rem;
+	right: 17rem;
 }
 
 .strong-row {
@@ -335,11 +400,14 @@ section:after {
 	flex-flow: row nowrap;
 	align-items: flex-end;
 	justify-content: space-between;
-	transform: translateX(-2rem);
+
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	scroll-padding: 4rem;
 }
 
 .strong-row-item {
-	height: 525px;
 	max-width: 350px;
 	margin-right: 3rem;
 }
@@ -372,14 +440,68 @@ section:after {
 	line-height: 2.55rem;
 }
 
-.strong-row-item.item-text h3 {
-	font-family: "Butler", sans-serif;
-	font-weight: normal;
-	font-size: 5.75rem;
+
+/* Menu */
+.menu {
 	position: absolute;
-	margin-top: -10rem;
+	left: 50%;
+	right: 50%;
+	top: 2rem;
+	z-index: 2;
 }
 
-.mobile-menu {
+.menu input {
 	display: none;
+}
+
+.menu__btn {
+	display: block;
+	width: 2rem;
+	height: 1.5rem;
+
+	position: relative;
+	
+	cursor: pointer;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+	display: block;
+	position: absolute;
+
+	width: 100%;
+	min-width: 1.5rem;
+	height: 2px;
+	background-color: #616161;
+
+	top: 0.5rem;
+}
+.menu__btn > span::before {
+	content: '';
+	top: -0.5rem;
+}
+.menu__btn > span::after {
+	content: '';
+	top: 0.5rem;
+}
+
+.menu__items {
+	display: flex;
+	position: relative;
+	z-index: 3;
+	flex-flow: column wrap;
+
+	min-width: 10rem;
+
+	background-color: #fff;
+	display: none;
+}
+
+.menu__items a {
+	margin: 0.5rem 2rem;
+}
+
+#menu__toggle:checked ~ .menu__items {
+	display: flex;
 }

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>OTUS: Html+Css demo page</title>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +15,19 @@
 	<link rel="stylesheet" type="text/css" href="./css/mobile.css">
 </head>
 <body>
+	<div class="menu">
+		<input id="menu__toggle" type="checkbox" />
+		<label class="menu__btn" for="menu__toggle">
+			<span></span>
+		</label>
+
+		<nav class='menu__items'>
+			<a href="#about-section">B<span>iography</span></a>
+			<a href="#designer-section">D<span>esigners</span></a>
+			<a href="#testimonials-section">T<span>estimonials</span></a>
+			<a href="#strong-section">S<span>trong points</span></a>
+		</nav>
+	</div>
 	<main>
 		<section id='hero-section' class='hero-section'>
 			<div class="hero-title">
@@ -48,24 +62,21 @@
 
 		<section id='designer-section'>
 			<h2>Designers</h2>
-			<div class='designers'>
-				<div class='designer-element'>
+			<div class='designers'><div class='designer-element'>
 					<img src='./img/designer-wonder.jpg' alt='Jess wonder'>
 					<div>
 						<p><strong>Jess Wonder</strong><br />
 						<b>From/</b> Be more flower<br />
 						<b>Skills/</b> Design Strategy / Marketing</p>
 					</div>
-				</div>
-				<div class='designer-element'>
+				</div><div class='designer-element'>
 					<img src='./img/designer-clein.jpg' alt='Kameron Clein'>
 					<div>
 						<p><strong>Kameron Clein</strong><br />
 						<b>From/</b> Be more flower<br />
 						<b>Skills/</b> Design Strategy / Marketing</p>
 					</div>
-				</div>
-				<div class='designer-element'>
+				</div><div class='designer-element'>
 					<img src='./img/designer-red.jpg' alt='Louisse Red'>
 					<div>
 						<p><strong>Louisse Red</strong><br />
@@ -90,11 +101,9 @@
 				<div  class='creativity'>
 					<p><b>Website</b><br/>www.whitepapers.com</p>
 				</div>
-			</div>
-			<div class='testimonial-image'>
+			</div><div class='testimonial-image'>
 				<img src='./img/testimonial-house.jpg' alt="House">
-			</div>
-			<div class='testimonial-motivation'>
+			</div><div class='testimonial-motivation'>
 				<div class='container'>
 					<p>I just really want to do good work and work with some great people, people who challange me.</p>
 					<img src="./img/testimonial-pocket.jpg" alt="Pocket">
@@ -105,6 +114,8 @@
 		<section id='strong-section'>
 			<h2>Strong points</h2>
 
+			<h3>Strengths</h3>
+
 			<div class='strong-row'>
 				<div class='strong-row-item item-image'>
 					<img src='./img/strong-1.jpg' alt="" />
@@ -113,7 +124,7 @@
 					<img src='./img/strong-2.jpg' alt="" />
 				</div>
 				<div class='strong-row-item item-text active'>
-					<h3>Strengths</h3>
+					
 					<div class='text-only'>
 						<div>Interiors</div>
 						<div>Outdoors</div>
@@ -135,11 +146,5 @@
 			</div>
 		</section>
 	</main>
-	<nav class="mobile-menu">
-		<a href="#about-section">B</a>
-		<a href="#designer-section">D</a>
-		<a href="#testimonials-section">T</a>
-		<a href="#strong-section">S</a>
-	</nav>
 </body>
 </html>
