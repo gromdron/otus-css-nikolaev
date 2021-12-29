@@ -214,7 +214,7 @@ p {
 	max-width: 100%;
 }
 
-@supports /*false &&*/ (display:flex)
+@supports false && (display:flex)
 {
 	#designer-section {
 		display: flex;
@@ -315,6 +315,10 @@ p {
 	width: 14rem;
 }
 
+.creativities-mobile { 
+	display: none;
+}
+
 .testimonial-motivation .container img {
 	width: 14rem;
 }
@@ -325,6 +329,10 @@ p {
 		display: grid;
 		grid-template-columns: auto 40% 50%;
 		grid-template-rows: 3rem auto;
+	}
+
+	.testimonial-headline h2 {
+		padding: 0;
 	}
 
 	.testimonial-headline {
@@ -340,6 +348,10 @@ p {
 		align-items: flex-start;
 		justify-content: center;
 		width: auto;
+	}
+
+	.creativity {
+		display: block;
 	}
 
 	.creativities {
