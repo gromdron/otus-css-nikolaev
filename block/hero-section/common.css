@@ -1,0 +1,46 @@
+.hero-section {
+	max-width: 1065px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 100vh;
+
+	background-image: url('./../../img/hero-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+
+	min-height: 100vh;
+}
+
+.hero-section:before {
+	content: "";
+} 
+
+.hero-section__title-block {
+	position: relative;
+	background-color: white;
+	font-size: 5.5rem;
+	padding: 1.5em .5em 1.4em;
+	z-index: 1;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.hero-section__title {
+	font-family: "Butler", sans-serif;
+	font-weight: 300;
+	font-size: 5.5rem;
+	line-height: 1.1em;
+	margin: 0;
+}
+
+.hero-section__sub-title {
+	line-height: 21px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.125rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0;
+}

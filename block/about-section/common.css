@@ -1,0 +1,104 @@
+.about-section__title {
+	position: absolute;
+	transform: rotate(-90deg);
+	bottom: 10vh;
+	margin: 0;
+	right: 0;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.about-section__container {
+	padding: 0 8rem;
+	height: 100%;
+}
+
+.about-section__container:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.about-section__container-element {
+	width: 50%;
+	float: left;
+	height: 100%;
+}
+
+.about-section__container-element__image {
+	overflow: hidden;
+}
+
+.about-section__image {
+	object-fit: cover;
+	height: 90%;
+	object-position: center;
+	width: 100%;
+}
+
+.about-section__vertical-block {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0 8rem;
+}
+
+.about-section__subtitle {
+	font-family: "Butler", sans-serif;
+	font-size: 5.4rem;
+	font-weight: 300;
+}
+
+.about-section__profession-title {
+	font-size: 1.15rem;
+	font-weight: 500;
+	margin: 0;
+	color: #636363;
+}
+
+.about-section__profession-strength {
+	font-size: 1.15rem;
+	font-weight: 500;
+	margin: 0;
+	color: #636363;
+}
+
+.about-section__profession-strength:after {
+	content: "\0020\002F\0020";
+	display: inline;
+	color: #636363;
+	font-size: 1.15rem;
+	font-weight: 500;
+}
+
+.about-section__profession-strength:last-child:after {
+	content: "\0020";
+}
+
+.about-section__figure {
+	margin:  0;
+}
+
+.about-section__figure-caption {
+	display: none;
+}
+
+.about-section__figure-blockquote {
+	margin: 0;
+}
+
+.about-section__figure-blockquote-text:before {
+	content: "\201C";
+	display: inline;
+}
+
+.about-section__figure-blockquote-text:after {
+	content: "\201D";
+	display: inline;
+}
+
+.about-section__figure-blockquote-text {
+	font-family: "Butler", sans-serif;
+	font-weight: 300;
+	font-size: 2rem;
+}

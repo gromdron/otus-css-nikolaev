@@ -1,0 +1,17 @@
+.common-body {
+	font-family: 'Roboto', sans-serif;
+	background-color: white;
+}
+
+.common-body-container {
+	max-width: 1440px;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+.screen-section {
+	height: 100vh;
+	min-height: 50rem;
+	position: relative;
+	width: 100%;
+}

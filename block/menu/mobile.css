@@ -1,0 +1,38 @@
+@media screen and (max-width: 767px) {
+	.menu {
+		position: fixed;
+		top: unset;
+		left: unset;
+		right: unset;
+		bottom: 0;
+		width: 100%;
+		height: calc(4rem + 1px);
+	}
+
+	.menu__btn {
+		display: none;
+	}
+
+	.menu__items {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		height: 100%;
+		border-top: 1px solid black;
+	}
+
+	.menu__item {
+		display: block;
+		font-family: "Butler", sans-serif;
+		font-weight: normal;
+		font-size: 2.5rem;
+		margin: unset;
+		text-decoration: none;
+		color: #000;
+		margin-top: 0.5rem;
+	}
+
+	.menu__item-hidden-mobile-part {
+		display: none;
+	}
+}

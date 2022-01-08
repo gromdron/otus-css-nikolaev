@@ -1,0 +1,134 @@
+.testimonials-section__title {
+	padding: 1rem 10rem;
+	margin: 0;
+	margin-block: 0;
+	line-height: 1;
+	font-size: 1.2rem;
+}
+
+.testimonials-section__creativities {
+	height: 85%;
+	display: table;
+	table-layout: fixed;
+	width: 10%;
+	float: left;
+}
+.testimonials-section__creativities:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.creativity {
+	display: table-row;
+}
+.creativity__item {
+	transform: rotate(-90deg) translateX(-50%) translateY(2rem);
+}
+
+.testimonials-section__image-block {
+	float: left;
+	width: 40%;
+}
+.testimonials-section__image-block:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.testimonials-section__image-block-img {
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.testimonials-section__motivation-block {
+	width: 50%;
+	float: left;
+}
+.testimonials-section__motivation-block:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.testimonials-section__motivation-block-container {
+	width: 15rem;
+	margin: 0 auto;
+}
+
+.testimonials-section__motivation-block-slogan {
+	font-family: "Butler", sans-serif;
+	font-weight: 300;
+	font-size: 2rem;
+	line-height: 2.4rem;
+	width: 14rem;
+}
+
+.testimonials-section__motivation-block-image {
+	width: 14rem;
+}
+
+.testimonials-section__creativities-mobile {
+	display: none;
+}
+
+@supports /*false &&*/ (display:grid)
+{
+	.testimonials-section {
+		display: grid;
+		grid-template-columns: auto 40% 50%;
+		grid-template-rows: 3rem auto;
+	}
+
+	.testimonials-section__title {
+		padding: 0;
+	}
+
+	.testimonials-section__headline {
+		grid-column: 2 / 4;
+		align-self: center;
+		margin: 0;
+	}
+
+	.testimonials-section__image-block {
+		grid-row: 2 /3;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-start;
+		justify-content: center;
+		width: auto;
+	}
+
+	.creativity {
+		display: block;
+	}
+
+	.testimonials-section__creativities {
+		width: auto;
+		display: flex;
+		flex-flow: column-reverse;
+		justify-content: space-around;
+		grid-row: 1 / 3;
+		grid-column: 1 / 2;
+		transform: translate(10%);
+	}
+
+	.testimonials-section__creativities::after {
+		display: none;
+	}
+
+	.testimonials-section__motivation-block::after {
+		display: none;
+	}
+
+	.testimonials-section__motivation-block {
+		grid-row: 2 / 3;
+		width: auto;
+	}
+
+	.testimonials-section__motivation-block-container {
+		max-width: 15rem;
+		text-align: center;
+	}
+}

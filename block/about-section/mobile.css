@@ -1,0 +1,61 @@
+@media screen and (max-width: 767px) {
+
+	.about-section__title {
+		position: absolute;
+		transform: rotate(0deg);
+		top: 2rem;
+		right: 2rem;
+	}
+
+	.about-section__container {
+		display: flex;
+		padding: 0;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.about-section__container-element {
+		width: 100%;
+	}
+
+	.about-section__container-element__image {
+		order: 1;
+		max-height: 50vh;
+	}
+
+	.about-section__image {
+		object-fit: none;
+		height: 100%;
+	}
+
+	.about-section__vertical-block {
+		padding: 0;
+		position: relative;
+		transform: none;
+		top: 0;
+	}
+	
+	.about-section__subtitle {
+		display: none;
+	}
+
+	.about-section__profession-block {
+		padding: 2rem;
+	}
+
+	.about-section__profession-strength {
+		display: block;
+	}
+
+	.about-section__figure-blockquote {
+		padding: 2rem;
+	}
+
+	.about-section__figure-caption {
+		display: block;
+		font-family: "Butler", sans-serif;
+		font-size: 4.875rem;
+		font-weight: normal;
+		text-align: center;
+	}
+}

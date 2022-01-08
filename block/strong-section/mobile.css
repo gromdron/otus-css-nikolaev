@@ -1,0 +1,46 @@
+@media screen and (max-width: 767px) {
+
+	.strong-section {
+		flex-flow: column;
+		align-items: flex-start;
+	}
+
+	.strong-section__title {
+		transform: unset;
+		top: 2rem;
+		right: 2rem;
+		left: unset;
+	}
+
+	.strong-section__sub-title {
+		right: 0;
+		left: 1rem;
+		position: relative;
+	}
+
+	.strong-row {
+		align-items: stretch;
+	}
+
+	.strong-row__item {
+		overflow: hidden;
+		margin-right: 1rem;
+		min-width: 15rem;
+		max-width: 15rem;
+	}
+
+	.strong-row__item__active {
+		order: -1;
+		min-width: 15rem;
+		max-width: 15rem;
+		margin-right: 1rem;
+	}
+
+	.strong-row__item-image {
+		height: 100%;
+		overflow: hidden;
+		object-fit: contain;
+	}
+
+
+}

@@ -1,0 +1,10 @@
+@media screen and (max-width: 767px) {
+	.common-body-container { 
+		margin-bottom: 5rem;
+	}
+	
+	.screen-section {
+		min-height: max(100vh, 40rem);
+		height: unset;
+	}
+}
