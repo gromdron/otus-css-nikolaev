@@ -1,5 +1,9 @@
 @media screen and (max-width: 767px) {
 
+	main { 
+		margin-bottom: 5rem;
+	}
+	
 	section {
 		min-height: max(100vh, 40rem);
 		height: unset;
