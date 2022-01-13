@@ -29,7 +29,7 @@
 		max-width: 15rem;
 	}
 
-	.strong-row__item__active {
+	.strong-row__item_active {
 		order: -1;
 		min-width: 15rem;
 		max-width: 15rem;

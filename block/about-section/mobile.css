@@ -18,7 +18,7 @@
 		width: 100%;
 	}
 
-	.about-section__container-element__image {
+	.about-section__container-element_image {
 		order: 1;
 		max-height: 50vh;
 	}

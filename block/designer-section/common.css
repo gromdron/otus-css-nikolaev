@@ -34,7 +34,7 @@
 	text-transform: uppercase;
 }
 
-.designer-element____first {
+.designer-element_first {
 	width: 45%;
 	margin-right: 5%;
 }
@@ -55,13 +55,13 @@
 		margin: unset;
 	}
 
-	.designer-element__image__first {
+	.designer-element__image_first {
 		display: flex;
 		align-content: center;
 		justify-content: center;
 		max-width: 95%;
 	}
-	.designer-element__block__first {
+	.designer-element__block_first {
 		max-width: 100%;
 		object-fit: scale-down;
 	}

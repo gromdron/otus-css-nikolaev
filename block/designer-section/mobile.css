@@ -35,13 +35,13 @@
 		height: 24rem;
 	}
 
-	.designer-element__image__first {
+	.designer-element__image_first {
 		max-width: 100%;
 		object-fit: none;
 		height: 24rem;
 		object-position: 10% 100%;
 	}
-	.designer-element__block__first {
+	.designer-element__block_first {
 		display: block;
 		max-width: 100%;
 	}
@@ -66,11 +66,11 @@
 			transform: none;
 		}
 
-		.designer-element____first {
+		.designer-element_first {
 			order: 1;
 		}
 
-		.designer-element__image__first {
+		.designer-element__image_first {
 			display: flex;
 			align-content: center;
 			justify-content: center;

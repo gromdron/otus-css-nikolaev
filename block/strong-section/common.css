@@ -26,16 +26,6 @@
 	right: 17rem;
 }
 
-
-
-
-
-
-
-
-
-
-
 .strong-row {
 	display: flex;
 	width: 100%;
@@ -62,7 +52,7 @@
 	margin-right: 0px;
 }
 
-.strong-row__item__active {
+.strong-row__item_active {
 	position: relative;
 	min-width: 25rem;
 }
