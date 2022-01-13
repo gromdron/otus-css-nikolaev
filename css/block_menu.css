@@ -1,0 +1,102 @@
+.menu {
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	top: 2rem;
+	z-index: 2;
+}
+
+.menu__input {
+	display: none;
+}
+
+.menu__btn {
+	display: block;
+	width: 2rem;
+	height: 1.5rem;
+
+	position: relative;
+	
+	cursor: pointer;
+}
+
+.menu__btn-burger,
+.menu__btn-burger::before,
+.menu__btn-burger::after {
+	display: block;
+	position: absolute;
+
+	width: 100%;
+	min-width: 1.5rem;
+	height: 2px;
+	background-color: #616161;
+
+	top: 0.5rem;
+}
+.menu__btn-burger::before {
+	content: '';
+	top: -0.5rem;
+}
+.menu__btn-burger::after {
+	content: '';
+	top: 0.5rem;
+}
+
+.menu__items {
+	display: flex;
+	position: relative;
+	z-index: 3;
+	flex-flow: column wrap;
+
+	min-width: 10rem;
+
+	background-color: #fff;
+	display: none;
+}
+
+.menu__item {
+	margin: 0.5rem 2rem;
+}
+
+.menu__input:checked ~ .menu__items {
+	display: flex;
+}
+
+@media screen and (max-width: 767px) {
+	.menu {
+		position: fixed;
+		top: unset;
+		left: unset;
+		right: unset;
+		bottom: 0;
+		width: 100%;
+		height: calc(4rem + 1px);
+	}
+
+	.menu__btn {
+		display: none;
+	}
+
+	.menu__items {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		align-items: center;
+		height: 100%;
+		border-top: 1px solid black;
+	}
+
+	.menu__item {
+		display: block;
+		font-family: "Butler", sans-serif;
+		font-weight: normal;
+		font-size: 2.5rem;
+		margin: unset;
+		text-decoration: none;
+		color: #000;
+	}
+
+	.menu__item-hidden-mobile-part {
+		display: none;
+	}
+}
