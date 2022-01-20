@@ -26,6 +26,14 @@
 	 color: #000;
 }
 
+.font_size_2rem {
+	font-size: 2rem;
+}
+
 .section-title {
 	font-size: 1.125rem;
+}
+
+main {
+	overflow-x: hidden;
 }
