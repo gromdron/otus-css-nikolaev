@@ -9,28 +9,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
-	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="./css/fonts.css">
-
-	<link rel="stylesheet" type="text/css" href="./block/common.css">
-	
-	<link rel="stylesheet" type="text/css" href="./block/menu/common.css">
-	<link rel="stylesheet" type="text/css" href="./block/menu/mobile.css">
-
-	<link rel="stylesheet" type="text/css" href="./block/hero-section/common.css">
-	<link rel="stylesheet" type="text/css" href="./block/hero-section/mobile.css">
-
-	<link rel="stylesheet" type="text/css" href="./block/about-section/common.css">
-	<link rel="stylesheet" type="text/css" href="./block/about-section/mobile.css">
-
-	<link rel="stylesheet" type="text/css" href="./block/designer-section/common.css">
-	<link rel="stylesheet" type="text/css" href="./block/designer-section/mobile.css">
-	
-	<link rel="stylesheet" type="text/css" href="./block/testimonials-section/common.css">
-	<link rel="stylesheet" type="text/css" href="./block/testimonials-section/mobile.css">
-
-	<link rel="stylesheet" type="text/css" href="./block/strong-section/common.css">
-	<link rel="stylesheet" type="text/css" href="./block/strong-section/mobile.css">
 </head>
 <body class='common-body'>
 	<div class="menu">
@@ -58,7 +36,7 @@
 			<h2 class='about-section__title'>Biography</h2>
 			<div class='about-section__container'>
 				<div class='about-section__container-element about-section__container-element_image'>
-					<img class='about-section__image' src='./img/katya.jpg' alt='Katya Mills'>
+					<img class='about-section__image' src="<%=require('./img/katya.jpg')%>" alt='Katya Mills'>
 				</div><div class='about-section__container-element'>
 					<div class='about-section__vertical-block'>
 						<h3 class='about-section__subtitle'>Katya<br />Mills</h3>
@@ -81,21 +59,21 @@
 		<section id='designer-section' class='screen-section designer-section'>
 			<h2 class='designer-section__title'>Designers</h2>
 			<div class='designer-section__designers'><div class='designer-element designer-element_first'>
-					<img class='designer-element__image designer-element__image_first' src='./img/designer-wonder.jpg' alt='Jess wonder'>
+					<img class='designer-element__image designer-element__image_first' src="<%=require('./img/designer-wonder.jpg')%>" alt='Jess wonder'>
 					<div class='designer-element__block designer-element__block_first'>
 						<p><strong class='designer-element__name'>Jess Wonder</strong><br />
 						<b>From/</b> Be more flower<br />
 						<b>Skills/</b> Design Strategy / Marketing</p>
 					</div>
 				</div><div class='designer-element'>
-					<img class='designer-element__image' src='./img/designer-clein.jpg' alt='Kameron Clein'>
+					<img class='designer-element__image' src="<%=require('./img/designer-clein.jpg')%>" alt='Kameron Clein'>
 					<div class='designer-element__block'>
 						<p><strong class='designer-element__name'>Kameron Clein</strong><br />
 						<b>From/</b> Be more flower<br />
 						<b>Skills/</b> Design Strategy / Marketing</p>
 					</div>
 				</div><div class='designer-element'>
-					<img class='designer-element__image' src='./img/designer-red.jpg' alt='Louisse Red'>
+					<img class='designer-element__image' src="<%=require('./img/designer-red.jpg')%>" alt='Louisse Red'>
 					<div class='designer-element__block'>
 						<p><strong class='designer-element__name'>Louisse Red</strong><br />
 						<b>From/</b> Be more flower<br />
@@ -120,11 +98,11 @@
 					<p class='creativity__item'><b>Website</b><br/>www.whitepapers.com</p>
 				</div>
 			</div><div class='testimonials-section__image-block'>
-				<img class='testimonials-section__image-block-img' src='./img/testimonial-house.jpg' alt="House">
+				<img class='testimonials-section__image-block-img' src="<%=require('./img/testimonial-house.jpg')%>" alt="House">
 			</div><div class='testimonials-section__motivation-block'>
 				<div class='testimonials-section__motivation-block-container'>
 					<p class='testimonials-section__motivation-block-slogan'>I just really want to do good work and work with some great people, people who challange me.</p>
-					<img class='testimonials-section__motivation-block-image' src="./img/testimonial-pocket.jpg" alt="Pocket">
+					<img class='testimonials-section__motivation-block-image' src="<%=require('./img/testimonial-pocket.jpg')%>" alt="Pocket">
 				</div>
 			</div><div class='testimonials-section__creativities-mobile'>
 				<div  class='creativity-mobile'>
@@ -146,10 +124,10 @@
 
 			<div class='strong-section__container strong-row'>
 				<div class='strong-row__item item-image'>
-					<img class='strong-row__item-image' src='./img/strong-1.jpg' alt="" />
+					<img class='strong-row__item-image' src="<%=require('./img/strong-1.jpg')%>" alt="" />
 				</div>
 				<div class='strong-row__item item-image'>
-					<img class='strong-row__item-image' src='./img/strong-2.jpg' alt="" />
+					<img class='strong-row__item-image' src="<%=require('./img/strong-2.jpg')%>" alt="" />
 				</div>
 				<div class='strong-row__item strong-row__item_active'>
 					<div class='strong-row__item-text'>
@@ -168,7 +146,7 @@
 					</div>
 				</div>
 				<div class='strong-row__item item-image'>
-					<img class='strong-row__item-image' src='./img/strong-2.jpg' alt="" />
+					<img class='strong-row__item-image' src="<%=require('./img/strong-2.jpg')%>" alt="" />
 				</div>
 			</div>
 		</section>
