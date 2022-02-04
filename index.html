@@ -8,20 +8,41 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="stylesheet" type="text/css" href="./css/fonts.css">
 
+	<script type="text/javascript">
+		tailwind.config = {
+			theme: {
+				minHeight: {
+					'auto': 'auto',
+					'screen': '100vh',
+				},
+				height: {
+					'auto': 'auto',
+					'full': '100%',
+					'screen': '100vh',
+				},
+				colors: {
+					'gray': '#636363',
+					'white': '#fff'
+				},
+				fontFamily: {
+					sans: ['Roboto', 'sans-serif'],
+					buttler: ['Butler', 'sans-serif']
+				},
+			}
+		};
+	</script>
 	<link rel="stylesheet" type="text/css" href="./css/block_menu.css">
-	<link rel="stylesheet" type="text/css" href="./css/common.css">
-	<link rel="stylesheet" type="text/css" href="./css/block_hero-section.css">
-	<link rel="stylesheet" type="text/css" href="./css/block_about-section.css">
-	<link rel="stylesheet" type="text/css" href="./css/block_designer-section.css">
+	<link rel="stylesheet" type="text/css" href="./css/block_hero-section_tailwind.css">
+	<link rel="stylesheet" type="text/css" href="./css/block_about-section_tailwind.css">
+	<link rel="stylesheet" type="text/css" href="./css/block_designer-section_tailwind.css">
 	<link rel="stylesheet" type="text/css" href="./css/block_testimonial-section.css">
 	<link rel="stylesheet" type="text/css" href="./css/block_strong-section.css">
-
 	<title>Design furniture</title>
 </head>
-<body class='common-body font-roboto font_color_black'>
+<body class='bg-white font-sans text-black'>
 	<div style='opacity: 0.5;width: 1440px;height: 4559px;display: none; position: absolute;'>
 		<div style='position: absolute;background-image: url("./img.png");top: 0;left: 0;width: 1440px;height: 4559px;'>
 		</div>
@@ -41,61 +62,99 @@
 		</nav>
 	</div>
 
-	<main class='container-md g-0'>
+	<main class='container mx-auto overflow-x-hidden'>
 
-		<section id='hero-section' class='hero-section d-flex align-items-center justify-content-center '>
-			<div class='vw-100 
-				d-flex
-				align-items-start align-items-md-center
-				justify-content-start justify-content-md-center
+		<section id='hero-section' class='flex items-center justify-center
+			h-auto min-h-[100vh]
+			md:h-[100vh] md:min-h-[630px]'>
+			<div class='w-screen
+				flex
+				items-start md:items-center
+				justify-start md:justify-center
 				hero-section__background
 				hero-section-background'>
 				<div class='hero-section__content
-					d-flex flex-column
+					flex flex-col
 					text-center
 					bg-white
 					'>
-					<h1 class='hero-section__title font-buttler font_light'>Atlas Studio</h1>
-					<h2 class='hero-section__subtitle'>Modern Web Studio</h2>
+					<h1 class='font-buttler font-light
+						text-[4.375rem] md:text-[5.4375rem]
+						'>Atlas Studio</h1>
+					<h2 class='text-[1.125rem]'>Modern Web Studio</h2>
 				</div>
 			</div>
 		</section>
 
-		<section id='about-section' class='about-section
-			d-flex flex-column 
-			position-relative
+		<section id='about-section' class='relative
+			flex
+			flex-col md:flex-row
 			'>
-			<h2 class='about-section__title section-title position-absolute'>Biography</h2>
-			<div class='row h-50 h-md-100 w-100 g-0 about-section__inner'>
-				<div class='col-12 col-md-6 about-section__image-block'>
-					<img class='about-section__image float-md-end me-md-2'
+			<h2 class='about-section-title
+				absolute
+				top-8 md:top-[unset]
+				right-8 md:right-[unset]
+				md:bottom-0
+				md:right-0
+				text-lg '>Biography</h2>
+			<div class='md:min-h-screen flex flex-col md:flex-row w-full'>
+				<div class='
+					w-full md:w-6/12
+					order-2 md:order-none
+					max-h-[60vh] md:max-h-[100vh]
+					overflow-hidden md:overflow-none
+					'>
+					<img class='object-cover h-full object-center w-full md:w-[38rem] md:pl-[3.375rem] md:h-[95%] md:m-w-full overflow-hidden'
 						src='https://images.unsplash.com/photo-1490505658643-e96d613eb642?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
 						alt='Katya Mills'>
 				</div>
-				<div class='col-12 col-md-6 d-md-flex flex-md-column justify-content-md-center about-section__content-block'>
-					<h3 class='d-none d-md-block about-section__author font-buttler font_light'>Katya<br />Mills</h3>
-					<div class='about-profession'>
-						<h4 class='about-profession__element about-profession__element_position font_color_grey'>Art Director</h4>
-						<span class='about-profession__element font_bolder font_color_grey'>Scenography</span> <span class='about-profession__element font_bolder font_color_grey'>Styling</span> <span class='about-profession__element font_bolder font_color_grey'>Creative Photography</span> <span class='about-profession__element font_bolder font_color_grey'>Design</span>
+				<div class='flex flex-col justify-center
+					w-full md:w-6/12
+					order-1 md:order-none
+					max-h-full 
+					pt-8 pl-8 pr-8
+					md:pt-0 md:pl-16 md:pr-16
+					'>
+					<h3 class='
+						hidden md:block
+						text-[5.4rem]
+						font-buttler font-light'>Katya<br />Mills</h3>
+					<div class='flex flex-col md:flex-row flex-wrap'>
+						<h4 class='about-profession md:w-full text-lg font-medium text-gray'>Art Director</h4>
+						<span class='about-profession text-lg font-medium text-gray'>Scenography</span>
+						<span class='about-profession text-lg font-medium text-gray'>Styling</span>
+						<span class='about-profession text-lg font-medium text-gray'>Creative Photography</span>
+						<span class='about-profession text-lg font-medium text-gray'>Design</span>
 					</div>
 
-					<figure class='about-section__quote'>
-						<blockquote class='blockquote font-buttler' cite="#">
-							<p class='about-section__quote-text'>The more I deal with the work as something that is my own,  as something that is personal, the more successful it is.</p>
+					<figure class='my-0'>
+						<blockquote class='font-buttler md:max-w-[26rem]' cite="#">
+							<p class='blockquote-text text-[2rem]'>The more I deal with the work as something that is my own,  as something that is personal, the more successful it is.</p>
 						</blockquote>
-						<figcaption class='d-block d-md-none about-section__quote-author font-buttler'>-Katy Mills</figcaption>
+						<figcaption class='block md:hidden text-[4rem] font-buttler'>-Katy Mills</figcaption>
 					</figure>
 				</div>
 			</div>
 		</section>
 
-		<section id='designer-section' class='designer-section
-			d-flex flex-column 
-			justify-content-center
-			position-relative
+		<section id='designer-section' class='relative
+			flex
+			flex-col
+			justify-center
+			min-h-screen md:min-h-auto
+			md:h-screen
 			'>
-			<h2 class='designer-section__title section-title position-absolute '>Designers</h2>
-			<div class='designer-section__container align-items-end d-flex flex-nowrap'>
+			<h2 class='designer-section-title absolute 
+				top-[2rem] lg:top-[20%]
+				right-[2rem] lg:right-[29%]
+				text-lg
+				'>Designers</h2>
+			<div class='flex items-end flex-nowrap
+				overflow-x-scroll lg:overflow-x-hidden
+				overflow-y-hidden
+				whitespace-nowrap
+				h-[30rem] lg:h-[35rem]
+				'>
 				<div class='designer-element designer-element_first'>
 					<img class='designer-element__image' src='https://images.unsplash.com/photo-1459201062043-6f30fd792f08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80' alt='Jess wonder'>
 					<div>
@@ -123,36 +182,40 @@
 			</div>
 		</section>
 
-		<section id='testimonials-section' class='testimonials-section
-			container'>
+		<section id='testimonials-section' class='flex flex-col min-h-screen'>
 
-			<div class='row g-0 testimonials-section__title-container'>
-				<div class="col col-md-11 offset-md-1"><h2 class="testimonials-section__title section-title">Testimonials</h2></div>
+			<div class="md:ml-[6rem]">
+				<h2 class="text-right md:text-left
+					pr-[2rem] md:pr-0
+					leading-[3.375rem]
+					text-lg">Testimonials</h2>
 			</div>
-			<div class='row g-md-0'>
-				<div class="col-12 col-md-1 testimonials-section__creativities-container">
-					<div class='row testimonials-section__creativities'>
-						<div class='col-6 col-md creativity'>
+			<div class='flex-grow flex flex-col md:flex-row justify-center md:justify-start'>
+				<div class="flex order-2 md:order-1 w-12/12 md:w-1/12">
+					<div class='flex-grow flex flex-row md:flex-col 
+						flex-wrap
+						px-[2rem] md:px-0
+						justify-between md:justify-evenly'>
+						<div class='creativity'>
 							<p><b>Creativity</b><br/>www.whitepapers.com</p>
 						</div>
-						<div class='col-6 col-md creativity'>
+						<div class='creativity'>
 							<p><b>Creativity</b><br/>www.whitepapers.com</p>
 						</div>
-						<div class='col-6 col-md creativity'>
+						<div class='creativity'>
 							<p><b>Website</b><br/>www.whitepapers.com</p>
 						</div>
 					</div>
-
 				</div>
-				<div class="d-none d-md-block col-md-5">
+				<div class="order-1 hidden w-12/12 md:block w-5/12 m-[2rem] md:m-0">
 					<img class='testimonials-section__image'
 						src='./img/testimonial-house.jpg'
 						alt="House">
 				</div>
-				<div class="col-12 col-md-6 d-flex justify-content-center">
-					<div class='testimonials-section__motivation-container'>
-						<p class='font-buttler text-center font_light font_size_2rem'>I just really want to do good work and work with some great people, people who challange me.</p>
-						<img class='testimonials-section__motivation-container-image'
+				<div class="order-1 w-12/12 md:w-6/12 flex justify-center">
+					<div class='px-[2rem] md:px-0 md:max-w-[15rem]'>
+						<p class='font-buttler text-center font-light text-[2rem]'>I just really want to do good work and work with some great people, people who challange me.</p>
+						<img class='object-cover max-h-[75vw] w-[100%] md:max-width-[100%] my-[2rem] :md:my-[0]'
 							src="./img/testimonial-pocket.jpg"
 							alt="Pocket">
 					</div>
@@ -160,21 +223,39 @@
 			</div>
 		</section>
 
-		<section id='strong-section' class='strong-section
-			d-flex align-items-center position-relative'>
-			<h2 class='strong-section__title section-title'>Strong points</h2>
+		<section id='strong-section' class='relative
+			flex 
+			flex-col
+			justify-center
+			min-h-screen md:min-h-auto
+			md:h-screen'>
+			<h2 class='absolute w-[max-content]
+				top-[2rem] md:top-[5rem]
+				right-[2rem] md:right-0
+				md:left-[14rem]
+				md:rotate-[-90deg] text-lg'>Strong points</h2>
 
-			<h3 class='strong-section__sub-title'>Strengths</h3>
+			<h3 class='relative md:absolute
+				md:top-[4rem]
+				md:right-[17rem]
+				font-buttler text-[5.75rem] leading-[5.75rem]
+				'>Strengths</h3>
 
-			<div class='strong-section__container strong-row'>
-				<div class='strong-row__item item-image'>
-					<img class='strong-row__item-image' src='./img/strong-1.jpg' alt="" />
+			<div class='flex
+					w-full
+					flex-row flex-nowrap items-end
+					justify-between
+					overflow-x-auto
+					items-stretch md:items-start
+					'>
+				<div class='strong-row-item'>
+					<img class='h-full overflow-hidden object-center object-contain md:object-cover max-w-none' src='./img/strong-1.jpg' alt="" />
 				</div>
-				<div class='strong-row__item item-image'>
-					<img class='strong-row__item-image' src='./img/strong-2.jpg' alt="" />
+				<div class='strong-row-item'>
+					<img class='h-full overflow-hidden object-center object-contain md:object-cover max-w-none' src='./img/strong-2.jpg' alt="" />
 				</div>
-				<div class='strong-row__item strong-row__item_active'>
-					<div class='strong-row__item-text'>
+				<div class='strong-row-item strong-row__item_active'>
+					<div class='p-[2rem] font-buttler text-[2.125rem] leading-[2.55rem]'>
 						<div>Interiors</div>
 						<div>Outdoors</div>
 						<div>Portraits</div>
@@ -189,13 +270,11 @@
 						<div>Creativity</div>
 					</div>
 				</div>
-				<div class='strong-row__item item-image'>
-					<img class='strong-row__item-image' src='./img/strong-2.jpg' alt="" />
+				<div class='strong-row-item'>
+					<img class='h-full overflow-hidden object-center object-contain md:object-cover max-w-none' src='./img/strong-2.jpg' alt="" />
 				</div>
 			</div>
 		</section>
 	</main>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
